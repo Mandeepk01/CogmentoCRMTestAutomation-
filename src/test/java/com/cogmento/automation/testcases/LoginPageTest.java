@@ -3,9 +3,11 @@ package com.cogmento.automation.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.cogmento.automation.base.TestBase;
+import com.cogmento.automation.listener.AllureListener;
 import com.cogmento.automation.pages.LoginPage;
 
 import io.qameta.allure.Description;
@@ -14,6 +16,7 @@ import io.qameta.allure.Story;
 import lombok.extern.slf4j.Slf4j;
 @Epic("Login Flow")
 @Slf4j
+@Listeners({AllureListener.class})
 public class LoginPageTest extends TestBase {
 	LoginPage loginPage;
 
